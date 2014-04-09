@@ -293,10 +293,12 @@ tfoot td {}
     color: white;
 }
 .login input[type="text"]{
+    visibility: hidden;
     margin-top: 1em;
     font-size: 1em;
 }
 .login input[type="password"]{
+    visibility: hidden;
     margin-top: 1em;
     font-size: 1em;
 }
@@ -484,6 +486,7 @@ input:focus {
     border:1px solid #fff;
     padding:10px 15px;
     width:200px;
+    height: 200px;
     display:none;
     color:#fff;
     text-align:left;

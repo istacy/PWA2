@@ -19,20 +19,20 @@
 </head>
 <body>
 
-    <header>
+
         <div id="header">
             <div class="login">
                 <form class="login">
                     <input type="text" name="username" placeholder="username" title="This is YOU">
                     <input type="password" name="password" placeholder="password" title="It's A Secret">
-                    <input type="submit" value="Log In">
+                    <input type="submit" value="Log In" title="Log Me In!">
                 </form>
             </div>
             <div class="logo">TimeWise</div>
 
             <div class="divider"></div>
         </div>
-    </header>
+
 
     <!--<nav>
         <ul>
@@ -107,33 +107,32 @@
 
     <!-- jquery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
 
     <!-- plugins -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 
     <!-- main -->
     <script type="text/javascript">
-        $(function() {
 
-            $('#register,:input').tooltip({
-                // select all desired input fields and attach tooltips to them
+        $('.login:input[type="submit"]').bind('mouseover', openLogin);
+        $('.login:input[type="submit"]').bind('mouseout', closeLogin);
 
-                // place tooltip on the right edge
-                position: "center right",
+        function openLogin() {
+            $(this).find('.login input[type="text"]').css('visibility', 'visible');
+        }
 
-                // a little tweaking of the position
-                offset: [-2, 10],
+        function closeLogin() {
+            $(this).find('.login input[type="text"]').css('visibility', 'hidden');
+        }
 
-                // use the built-in fadeIn/fadeOut effect
-                effect: "fade",
-
-                // custom opacity setting
-                opacity: 0.7
-
-            });
-        });
 
     </script>
+
+
+
+
+
 
 </body>
 </html>
