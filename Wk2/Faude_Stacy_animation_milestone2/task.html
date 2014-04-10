@@ -55,7 +55,30 @@
 
 
 
-</div>
+<!-- jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- plugins -->
+
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        var allPanels = $('#taskbox').hide();
+
+        $('.projectbox').click(function () {
+            allPanels.slideUp();
+            $(this).parent().next().slideDown();
+            return false;
+        });
+
+    });
+
+
+
+</script>
 
 </body>
 </html>

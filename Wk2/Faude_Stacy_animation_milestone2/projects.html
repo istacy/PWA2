@@ -35,7 +35,7 @@
         </div>
         <div class="accordionContent">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
     </div>
-    <div id="projectbox">
+    <div class="projectbox">
 
         <span class="status"></span>
         <span class="projectname">Project Name</span><br>
@@ -46,7 +46,7 @@
 
     </div>
         <div class="accordionContent">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
-    <div id="projectbox">
+    <div class="projectbox">
 
         <span class="status"></span>
         <span class="projectname">Project Name</span><br>
@@ -73,14 +73,13 @@
 
         $(document).ready(function() {
 
-            //ACCORDION BUTTON ACTION
-            $('div#projectbox').click(function() {
-                $('div.accordionContent').slideUp('normal');
-                $(this).next().slideDown('normal');
-            });
+            var allPanels = $('#projectbox').hide();
 
-            //HIDE THE DIVS ON PAGE LOAD
-            $("div.accordionContent").hide();
+            $('.projectbox .projectname').click(function () {
+                allPanels.slideUp();
+                $(this).parent().next().slideDown();
+                return false;
+            });
 
         });
 
