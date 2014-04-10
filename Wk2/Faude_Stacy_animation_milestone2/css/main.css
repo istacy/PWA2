@@ -36,6 +36,16 @@ body {
 .body {
     clear: both; margin: 0 auto; width: 800px;
 }
+.logo a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+.logo a:hover{
+    color:#00A0C6;
+    text-decoration:none;
+}
+
 .urgent {
     color: #a53e11;
 }
@@ -85,7 +95,7 @@ article {
     width: 248px;
 }
 
-#featured h2 {color: #1b5951; font-size: 1.714em; margin-bottom: 0.333em;}
+#featured h2 {font-size: 1.714em; margin-bottom: 0.333em;}
 #featured h3 {font-size: 1.429em; margin-bottom: .5em;}
 
 #featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
@@ -171,7 +181,6 @@ a:link, a:visited {
     text-decoration: underline;
 }
 a:hover, a:active {
-    background-color: #1b5951;
     color: #fff;
     text-decoration: none;
     text-shadow: 1px 1px 1px #333;
@@ -262,7 +271,7 @@ tfoot td {}
     width: 175px;
 }
 
-.logo {
+.logo{
     background: url('../img/owl-small.png')  no-repeat;
     height: 130px;
     line-height: 150px;
@@ -271,6 +280,19 @@ tfoot td {}
     font-size:5em;
     color: #987744;
 }
+.logo a{
+    height: 130px;
+    line-height: 150px;
+    text-indent: 120px;
+    font-family: 'never_say_neverregular', Arial, sans-serif;
+    font-size:1.5em;
+    color: #987744;
+    text-decoration: none;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+
 .neverfont {
     padding: 1em;
     font-family: 'never_say_neverregular', Arial, sans-serif;
@@ -491,6 +513,11 @@ input:focus {
 .trash {
     padding: 10px;
     float: right;
+}
+.footer{
+    padding: 25px;
+    text-align: center;
+    background-color: #00beca;
 }
 #sliderWrap {
     float: right;
