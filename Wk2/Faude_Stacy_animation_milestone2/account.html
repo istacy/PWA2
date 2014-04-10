@@ -17,18 +17,83 @@
     <div class="divider"></div>
 </div>
 
-<div id="page-myaccount" style="width: 760px">
-        <span>My Account</span>
+<aside id="featured" class="body">
 
+    <ul class='tabs'>
+        <li><a href='#tab1'>Account Info</a></li>
+        <li><a href='#tab2'>Change Password</a></li>
+        <li><a href='#tab3'>Tab 3</a></li>
+    </ul>
+    <div id='tab1'>
+        <form class="tab1">
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="text" name="fname" placeholder="first name"><br>
+        <input type="text" name="lname" placeholder="lastname"><br>
+        <input type="email" name="email" placeholder="email"><br>
+        <input type="submit" value="Submit" class="submit">
 
-<form class="account">
-<input type="text" name="username" placeholder="username"><br>
-<input type="text" name="fname" placeholder="first name"><br>
-<input type="text" name="lname" placeholder="lastname"><br>
-<input type="email" name="email" placeholder="email"><br>
-<input type="submit" value="Submit" class="submit">
-
-</form>
+    </form>
     </div>
+    <div id='tab2'>
+        <form class="tab2">
+            <input type="password" name="password" placeholder="Old Password"><br>
+            <input type="password" name="password" placeholder="New Password"><br>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+    <div id='tab3'>
+        <p>And this is the 3rd tab.</p>
+    </div>
+</aside>
+
+
+
+
+<!-- jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- plugins -->
+
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    $('ul.tabs').each(function(){
+        // For each set of tabs, we want to keep track of
+        // which tab is active and it's associated content
+        var $active, $content, $links = $(this).find('a');
+
+        // If the location.hash matches one of the links, use that as the active tab.
+        // If no match is found, use the first link as the initial active tab.
+        $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+        $active.addClass('active');
+
+        $content = $($active[0].hash);
+
+        // Hide the remaining content
+        $links.not($active).each(function () {
+            $(this.hash).hide();
+        });
+
+        // Bind the click event handler
+        $(this).on('click', 'a', function(e){
+            // Make the old tab inactive.
+            $active.removeClass('active');
+            $content.hide();
+
+            // Update the variables with the new link and content
+            $active = $(this);
+            $content = $(this.hash);
+
+            // Make the tab active.
+            $active.addClass('active');
+            $content.show();
+
+            // Prevent the anchor's default click action
+            e.preventDefault();
+        });
+    });
+
+    </script>
+
 </body>
 </html>

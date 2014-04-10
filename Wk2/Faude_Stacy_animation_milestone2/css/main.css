@@ -293,12 +293,10 @@ tfoot td {}
     color: white;
 }
 .login input[type="text"]{
-    visibility: hidden;
     margin-top: 1em;
     font-size: 1em;
 }
 .login input[type="password"]{
-    visibility: hidden;
     margin-top: 1em;
     font-size: 1em;
 }
@@ -312,7 +310,7 @@ input:focus {
     background-color: #00beca;
     margin-bottom: 10px;
 }
-#register{
+.register{
     float:right;
     background: #00beca;
     padding: 15px;
@@ -351,7 +349,7 @@ input:focus {
     color: white;
 }
 
-#register input {
+.register input {
     font-size: 1.2em;
     display: block;
     width: 90%;
@@ -459,7 +457,7 @@ input:focus {
     text-indent: 10px;
 }
 .taskname{
-    width: 545px;
+    width: 545;
     float: left;
     text-indent: 5px;
 }
@@ -480,19 +478,120 @@ input:focus {
     padding: 10px;
     float: right;
 }
+#sliderWrap {
+    float: right;
+    margin-top: -130px;
+    width: 300px;
+}
+#slider {
+    position: absolute;
+    background-image:url(../img/slider.png);
+    background-repeat:no-repeat;
+    background-position: bottom;
+    width: 300px;
+    height: 159px;
+    margin-top: -141px;
+}
+#slider img {
+    border: 0;
+}
+#sliderContent {
+    margin: 50px 0 0 50px;
+    position: absolute;
+    text-align:center;
+    color:#333333;
+    font-weight:bold;
+    padding: 10px;
+}
 
-.tooltip {
-    background-color:#000;
-    border:1px solid #fff;
-    padding:10px 15px;
-    width:200px;
-    height: 200px;
-    display:none;
-    color:#fff;
-    text-align:left;
+#sliderContent input[type="text"]{
+    margin-top: -20px;
+    float: left;
+}
+#sliderContent input[type="password"]{
+    float: left;
+}
+#sliderContent input[type="submit"]{
+    float: left;
+}
+
+
+#openCloseWrap {
+    position:absolute;
+    margin: 143px 0 0 120px;
     font-size:12px;
+    font-weight:bold;
+}
+.tabs li {
+    list-style:none;
+    display:inline;
+}
 
-    /* outline radius for mozilla/firefox only */
-    -moz-box-shadow:0 0 10px #000;
-    -webkit-box-shadow:0 0 10px #000;
+.tabs a {
+    padding:5px 10px;
+    display:inline-block;
+    background:#666;
+    color:#fff;
+    text-decoration:none;
+}
+
+.tabs a.active {
+    background:#00beca;
+    color:#fff;
+}
+
+.account-page {
+    background: #fff;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border: 10px;
+    padding: 30px;
+    width: 760px;
+    box-shadow: 10px 10px 5px #888888;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#featured .tab1 {
+    padding: 10px;
+    margin-left: 40px;
+    border: 2px solid #eee;
+    float: none;
+    width: 248px;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#featured .tab2 {
+    padding: 10px;
+    margin-left: 40px;
+    border: 2px solid #eee;
+    float: none;
+    width: 248px;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.tab1 input[type="submit"], .tab2 input[type="submit"]{
+    margin-top: 1em;
+    font-size: 1em;
+    background-color: #b6c439;
+    color: white;
+}
+.tab1 input[type="text"], .tab2 input[type="text"]{
+    margin-top: 1em;
+    font-size: 1em;
+}
+.tab1 input[type="email"], .tab2 input[type="email"]{
+    margin-top: 1em;
+    font-size: 1em;
+}
+.tab1 input[type="password"], .tab2 input[type="password"] {
+    margin-top: 1em;
 }
