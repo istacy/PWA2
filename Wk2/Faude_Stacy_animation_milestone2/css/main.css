@@ -595,3 +595,23 @@ input:focus {
 .tab1 input[type="password"], .tab2 input[type="password"] {
     margin-top: 1em;
 }
+
+#featured img[alt="status"]{
+    padding: 0px 5px;
+    width: 25px;
+    height: 25px;
+}
+.accordionButton {
+    width: 700px;
+    float: left;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.accordionContent {
+    width: 600px;
+    float: right;
+    margin: -200px;
+    background: #95B1CE;
+    display: none;
+}

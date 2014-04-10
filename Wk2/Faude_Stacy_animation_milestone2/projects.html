@@ -17,46 +17,75 @@
         <div class="divider"></div>
     </div>
 
-    <div id="page" style="width:760px">
+    <aside id="featured" class="body">
+
+        <div id="page" style="width:760px">
         <span>Projects<br>
             <span class="urgent"><img src="img/urgent.gif" alt="status">Urgent</span><span class="active"><img src="img/active.gif" alt="status">Active</span><span class="delayed"><img src="img/delayed.gif" alt="status">Delayed</span><span class="completed"><img src="img/complete.gif" alt="status">Completed</span>
-        <input type="submit" value="+ Add Project"></span>
-
-    </div>
+        <input type="submit" value="+ Add Project"></span><br><br>
 
     <div id="projectbox">
+
         <span class="status"></span>
         <span class="projectname">Project Name</span><br>
         <span class="projectdesc">Project Description</span>
         <span class="move"><img src="img/menu.png" style="width: 45px; height:45px;"></span>
         <span class="trash"><img src="img/trash.png" style="width: 20px; height:20px;"></span>
         <span class="edit"><img src="img/edit.png" style="width: 20px; height:20px;"></span>
+        </div>
+        <div class="accordionContent">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
     </div>
     <div id="projectbox">
+
         <span class="status"></span>
         <span class="projectname">Project Name</span><br>
         <span class="projectdesc">Project Description</span>
         <span class="move"><img src="img/menu.png" style="width: 45px; height:45px;"></span>
         <span class="trash"><img src="img/trash.png" style="width: 20px; height:20px;"></span>
         <span class="edit"><img src="img/edit.png" style="width: 20px; height:20px;"></span>
+
     </div>
+        <div class="accordionContent">Content 1<br /><br /><br /><br /><br /><br /><br /><br />Long Example</div>
     <div id="projectbox">
+
         <span class="status"></span>
         <span class="projectname">Project Name</span><br>
         <span class="projectdesc">Project Description</span>
         <span class="move"><img src="img/menu.png" style="width: 45px; height:45px;"></span>
         <span class="trash"><img src="img/trash.png" style="width: 20px; height:20px;"></span>
         <span class="edit"><img src="img/edit.png" style="width: 20px; height:20px;"></span>
+
     </div>
+        </aside>
 
     <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
 </div>
 
 
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- plugins -->
 
-</div>
+
+    <!-- main -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            //ACCORDION BUTTON ACTION
+            $('div#projectbox').click(function() {
+                $('div.accordionContent').slideUp('normal');
+                $(this).next().slideDown('normal');
+            });
+
+            //HIDE THE DIVS ON PAGE LOAD
+            $("div.accordionContent").hide();
+
+        });
 
 
 
+    </script>
 </body>
 </html>
