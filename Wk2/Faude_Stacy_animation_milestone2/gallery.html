@@ -23,11 +23,16 @@
     <div id="page" style="width:760px">
         <span>Gallery<br></span>
 
-        <a href="img/image-1.png" data-lightbox="image-1">Image #2</a>
-        <a href="img/image-2.png" data-lightbox="image-2">Image #2</a>
-        <a href="img/image-3.png" data-lightbox="image-3">Image #3</a>
-        <a href="img/image-4.png" data-lightbox="image-4">Image #4</a>
+        <div class="image-row">
+            <div class="image-set">
 
+        <a href="img/image-1.png" data-lightbox="owl">Image #1</a>
+        <a href="img/image-2.png" data-lightbox="owl">Image #2</a>
+        <a href="img/image-3.png" data-lightbox="owl">Image #3</a>
+        <a href="img/image-4.png" data-lightbox="owl">Image #4</a>
+
+            </div>
+        </div>
 
     </div>
 
@@ -38,20 +43,22 @@
 </div>
 
 
-<!-- jquery -->
+</div>
 
-<!-- plugins -->
 <script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/lightbox.min.js"></script>
+<script src="js/lightbox.js"></script>
 
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2196019-1']);
+    _gaq.push(['_trackPageview']);
 
-<!-- main -->
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript">
-
-
-
-
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 </script>
+
 </body>
 </html>
