@@ -30,6 +30,27 @@
 
 <div class="divider"></div>
 
+<!-- BEGIN Dark navigation bar -->
+
+<nav class="dark" align="center">
+    <ul class="clear">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Add Contact</a></li>
+        <li><a href="#">Add Project</a>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Project 4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Add Task</a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
+</nav>
+
+<!-- END Dark navigation bar -->
+
 <div id="main">
     <h2>Projects</h2>
     <span class="urgent"><img src="img/urgent.gif" alt="status">Urgent</span><span class="active"><img src="img/active.gif" alt="status">Active</span><span class="delayed"><img src="img/delayed.gif" alt="status">Delayed</span><span class="completed"><img src="img/complete.gif" alt="status">Completed</span>
@@ -84,6 +105,25 @@
 <!-- main -->
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
+    $(document).ready(function(){
+
+        // Requried: Navigation bar drop-down
+        $("nav ul li").hover(function() {
+            $(this).addClass("active");
+            $(this).find("ul").show().animate({opacity: 1}, 400);
+        },function() {
+            $(this).find("ul").hide().animate({opacity: 0}, 200);
+            $(this).removeClass("active");
+        });
+
+        // Requried: Addtional styling elements
+        $('nav ul li ul li:first-child').prepend('<li class="arrow"></li>');
+        $('nav ul li:first-child').addClass('first');
+        $('nav ul li:last-child').addClass('last');
+        $('nav ul li ul').parent().append('<span class="dropdown"></span>').addClass('drop');
+
+    });
+</script>
 
 </script>
 
