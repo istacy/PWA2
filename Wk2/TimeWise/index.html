@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Stacy Faude - TimeWise</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="logo"><a href="index.html">TimeWise</a></div>
+    <div id="sliderWrap">
+        <div id="openCloseIdentifier"></div>
+        <div id="slider">
+            <div id="sliderContent">
+                <form class="login">
+                    <input type="text" name="username" placeholder="username">
+                    <input type="password" name="password" placeholder="password">
+                    <input type="submit" value="Log In">
+                </form>
+            </div>
+            <div id="openCloseWrap">
+                <a href="#" class="topMenuAction" id="topMenuImage">
+                    <img src="img/open.png" alt="open" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="divider"></div>
+
+    <div id="main">
+
+    <form class="register">
+        <div class="neverfont">Sign Up Today!</div>
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="email" name="email" placeholder="email"><br>
+        <input type="submit" value="Register" class="button">
+    </form>
+
+
+        <h2>Discover How TimeWise Can Help...</h2>
+        <h3><a href="#">TimeWise version 2.1 Now Released</a></h3>
+
+
+    <ul>
+        <li>Identify key projects and integrate planning tools to better prioritize your work</li>
+        <li>Determine when to say “No” to unnecessary tasks</li>
+        <li>Apply techniques to clear the clutter in your mind for better focus and attention</li>
+    </ul>
+    <div class="center" align="center">
+        <img src="img/owlsinaline.png" alt="5owls">
+        <h3>With TimeWise you make Wise Time</h3>
+    </div>
+
+    </div>
+
+</div>
+
+
+<div class="footer">
+    Copyright Stacy Faude 2014
+</div>
+
+<!-- jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- plugins -->
+
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".topMenuAction").click( function() {
+                if ($("#openCloseIdentifier").is(":hidden")) {
+                    $("#slider").animate({
+                        marginTop: "-141px"
+                    }, 500 );
+                    $("#topMenuImage").html('<img src="img/open.png"/>');
+                    $("#openCloseIdentifier").show();
+                } else {
+                    $("#slider").animate({
+                        marginTop: "0px"
+                    }, 500 );
+                    $("#topMenuImage").html('<img src="img/close.png"/>');
+                    $("#openCloseIdentifier").hide();
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
