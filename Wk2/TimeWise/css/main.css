@@ -156,7 +156,6 @@ input:focus {
     display: block;
     width: 90%;
     padding: 5px;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 .register input[type="submit"]:hover{
@@ -239,7 +238,7 @@ img [alt="5owls"]{
     background-color: #b6c439;
 }
 .projectname{
-    width: 545;
+    width: 545px;
     float: left;
     text-indent: 5px;
 }
@@ -272,8 +271,6 @@ img [alt="5owls"]{
     box-shadow: 10px 10px 5px #888888;
 
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 .taskname{
     width: 545px;
@@ -314,8 +311,6 @@ img[alt="status"]{
     width: 248px;
 
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 .tab2 {
     padding: 10px;
@@ -325,8 +320,6 @@ img[alt="status"]{
     width: 248px;
 
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 .tab1 input[type="submit"], .tab2 input[type="submit"]{
     margin-top: 1em;

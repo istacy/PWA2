@@ -55,9 +55,9 @@
         <h3>With TimeWise you make Wise Time</h3>
     </div>
 
-    </div>
-
 </div>
+
+
 
 
 <div class="footer">
@@ -66,31 +66,12 @@
 
 <!-- jquery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 <!-- plugins -->
 
 
 <!-- main -->
 <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".topMenuAction").click( function() {
-                if ($("#openCloseIdentifier").is(":hidden")) {
-                    $("#slider").animate({
-                        marginTop: "-141px"
-                    }, 500 );
-                    $("#topMenuImage").html('<img src="img/open.png"/>');
-                    $("#openCloseIdentifier").show();
-                } else {
-                    $("#slider").animate({
-                        marginTop: "0px"
-                    }, 500 );
-                    $("#topMenuImage").html('<img src="img/close.png"/>');
-                    $("#openCloseIdentifier").hide();
-                }
-            });
-        });
-    </script>
-
 
 </body>
 </html>

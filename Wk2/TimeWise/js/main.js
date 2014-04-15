@@ -122,6 +122,38 @@
         $("#paragraph").hide();
     });
 
+    //Dropdown Login
+    $(".topMenuAction").click( function() {
+        if ($("#openCloseIdentifier").is(":hidden")) {
+            $("#slider").animate({
+                marginTop: "-141px"
+            }, 500 );
+            $("#topMenuImage").html('<img src="../img/open.png"/>');
+            $("#openCloseIdentifier").show();
+        } else {
+            $("#slider").animate({
+                marginTop: "0px"
+            }, 500 );
+            $("#topMenuImage").html('<img src="../img/close.png"/>');
+            $("#openCloseIdentifier").hide();
+        }
+    });
+
+    // Requried: Navigation bar drop-down
+    $("nav ul li").hover(function() {
+        $(this).addClass("active");
+        $(this).find("ul").show().animate({opacity: 1}, 400);
+    },function() {
+        $(this).find("ul").hide().animate({opacity: 0}, 200);
+        $(this).removeClass("active");
+    });
+
+    // Requried: Addtional styling elements
+    $('nav ul li ul li:first-child').prepend('<li class="arrow"></li>');
+    $('nav ul li:first-child').addClass('first');
+    $('nav ul li:last-child').addClass('last');
+    $('nav ul li ul').parent().append('<span class="dropdown"></span>').addClass('drop');
+
 
 
 
